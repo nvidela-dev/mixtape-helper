@@ -33,7 +33,7 @@ export function ImageUpload({ image, onChange, disabled }: ImageUploadProps) {
         alert('Failed to read image file');
       }
     },
-    [onChange]
+    [onChange],
   );
 
   const handleChange = useCallback(
@@ -41,7 +41,7 @@ export function ImageUpload({ image, onChange, disabled }: ImageUploadProps) {
       const file = e.target.files?.[0];
       if (file) handleFile(file);
     },
-    [handleFile]
+    [handleFile],
   );
 
   const handleDrop = useCallback(
@@ -50,7 +50,7 @@ export function ImageUpload({ image, onChange, disabled }: ImageUploadProps) {
       const file = e.dataTransfer.files[0];
       if (file) handleFile(file);
     },
-    [handleFile]
+    [handleFile],
   );
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
@@ -82,6 +82,7 @@ export function ImageUpload({ image, onChange, disabled }: ImageUploadProps) {
             </div>
           </div>
           <button
+            type="button"
             onClick={handleRemove}
             disabled={disabled}
             className="p-2 text-brown/40 hover:text-brown hover:bg-tan/20 rounded-lg transition-colors disabled:opacity-50"

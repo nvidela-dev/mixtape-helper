@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+// Component styles
+@import '../styles/cassette-deck';
+@import '../styles/components';
+
 :root {
   --color-cream: #F5F0E1;
   --color-tan: #C4A77D;

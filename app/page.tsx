@@ -131,10 +131,11 @@ export default function Home() {
             <div className="rounded-2xl border-3 border-dashed border-tan bg-cream/80 backdrop-blur-sm p-6">
               <VideoPreview
                 url={outputUrl}
-                filename={audio?.name.replace(/\.[^.]+$/, '') + '-video.mp4'}
+                filename={`${audio?.name.replace(/\.[^.]+$/, '') ?? 'output'}-video.mp4`}
               />
             </div>
             <button
+              type="button"
               onClick={handleReset}
               className="w-full text-sm text-forest hover:text-cream py-2 border border-olive rounded-lg hover:bg-olive transition-all"
             >
@@ -174,6 +175,7 @@ export default function Home() {
               </div>
             ) : (
               <button
+                type="button"
                 onClick={handleExport}
                 disabled={!canExport}
                 className={`w-full py-4 px-6 rounded-lg font-semibold transition-all ${

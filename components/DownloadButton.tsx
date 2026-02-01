@@ -19,6 +19,7 @@ export function DownloadButton({ url, filename }: DownloadButtonProps) {
 
   return (
     <button
+      type="button"
       onClick={handleDownload}
       className="w-full py-3 px-4 bg-olive hover:bg-forest text-cream rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
     >

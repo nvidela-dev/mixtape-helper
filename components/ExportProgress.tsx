@@ -16,6 +16,8 @@ export function ExportProgress({ state, onCancel }: ExportProgressProps) {
     error: 'Error',
   }[state.status];
 
+  const progressWidth = state.status === 'loading' ? '10%' : `${state.progress}%`;
+
   return (
     <div>
       <div className="flex items-center justify-between mb-4">
@@ -33,18 +35,22 @@ export function ExportProgress({ state, onCancel }: ExportProgressProps) {
           )}
         </div>
         <button
+          type="button"
           onClick={onCancel}
           className="px-4 py-2 text-sm border border-tan text-brown/60 hover:text-brown hover:border-olive rounded-lg transition-colors"
         >
           Cancel
         </button>
       </div>
-      <div className="w-full bg-tan/30 rounded-full h-2 overflow-hidden">
+      <div className="export-progress__bar-container">
         <div
-          className="h-full bg-olive transition-all duration-300 ease-out"
-          style={{
-            width: state.status === 'loading' ? '10%' : `${state.progress}%`,
-          }}
+          className="export-progress__bar"
+          style={
+            {
+              '--progress-width': progressWidth,
+              width: 'var(--progress-width)',
+            } as React.CSSProperties
+          }
         />
       </div>
     </div>

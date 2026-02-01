@@ -30,7 +30,7 @@ export function AudioUpload({ audio, onChange, disabled }: AudioUploadProps) {
         alert('Failed to read audio file');
       }
     },
-    [onChange]
+    [onChange],
   );
 
   const handleChange = useCallback(
@@ -38,7 +38,7 @@ export function AudioUpload({ audio, onChange, disabled }: AudioUploadProps) {
       const file = e.target.files?.[0];
       if (file) handleFile(file);
     },
-    [handleFile]
+    [handleFile],
   );
 
   const handleDrop = useCallback(
@@ -47,7 +47,7 @@ export function AudioUpload({ audio, onChange, disabled }: AudioUploadProps) {
       const file = e.dataTransfer.files[0];
       if (file) handleFile(file);
     },
-    [handleFile]
+    [handleFile],
   );
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
@@ -72,6 +72,7 @@ export function AudioUpload({ audio, onChange, disabled }: AudioUploadProps) {
             </div>
           </div>
           <button
+            type="button"
             onClick={() => onChange(null)}
             disabled={disabled}
             className="p-2 text-brown/40 hover:text-brown hover:bg-tan/20 rounded-lg transition-colors disabled:opacity-50"

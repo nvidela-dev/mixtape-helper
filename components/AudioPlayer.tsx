@@ -50,6 +50,7 @@ export function AudioPlayer({ audio }: AudioPlayerProps) {
       />
       <div className="flex items-center gap-4">
         <button
+          type="button"
           onClick={togglePlay}
           className="w-10 h-10 flex items-center justify-center bg-olive hover:bg-forest text-cream rounded-full transition-colors"
           aria-label={isPlaying ? 'Pause' : 'Play'}

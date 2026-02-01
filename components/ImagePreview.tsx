@@ -43,11 +43,15 @@ export function ImagePreview({
           ref={canvasRef}
           width={resolution.width}
           height={resolution.height}
-          className="rounded-lg border border-tan shadow-sm"
-          style={{
-            width: previewWidth,
-            height: previewHeight,
-          }}
+          className="image-preview__canvas"
+          style={
+            {
+              '--preview-width': `${previewWidth}px`,
+              '--preview-height': `${previewHeight}px`,
+              width: 'var(--preview-width)',
+              height: 'var(--preview-height)',
+            } as React.CSSProperties
+          }
         />
       </div>
       <p className="text-xs text-brown/40 text-center mt-2">

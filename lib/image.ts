@@ -10,7 +10,7 @@ export interface ScaledDimensions {
 export function calculateScaledDimensions(
   imageWidth: number,
   imageHeight: number,
-  target: Resolution
+  target: Resolution,
 ): ScaledDimensions {
   const imageAspect = imageWidth / imageHeight;
   const targetAspect = target.width / target.height;
@@ -40,12 +40,12 @@ export function drawPreviewFrame(
   ctx: CanvasRenderingContext2D,
   image: HTMLImageElement,
   target: Resolution,
-  backgroundColor: string = '#000000'
+  backgroundColor: string = '#000000',
 ): void {
   const { width, height, offsetX, offsetY } = calculateScaledDimensions(
     image.naturalWidth,
     image.naturalHeight,
-    target
+    target,
   );
 
   // Fill background

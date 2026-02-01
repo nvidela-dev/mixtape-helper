@@ -27,7 +27,7 @@ export async function encodeVideo(
   audioFile: File,
   imageFile: File,
   onProgress?: (progress: number) => void,
-  signal?: AbortSignal
+  signal?: AbortSignal,
 ): Promise<Uint8Array> {
   const ff = await loadFFmpeg();
 
@@ -53,14 +53,14 @@ export async function encodeVideo(
     const durationMatch = message.match(/Duration: (\d{2}):(\d{2}):(\d{2})/);
     if (durationMatch) {
       const [, hours, minutes, seconds] = durationMatch;
-      duration = parseInt(hours) * 3600 + parseInt(minutes) * 60 + parseInt(seconds);
+      duration = parseInt(hours, 10) * 3600 + parseInt(minutes, 10) * 60 + parseInt(seconds, 10);
     }
 
     // Parse current time for progress
     const timeMatch = message.match(/time=(\d{2}):(\d{2}):(\d{2})/);
     if (timeMatch && duration > 0) {
       const [, hours, minutes, seconds] = timeMatch;
-      const currentTime = parseInt(hours) * 3600 + parseInt(minutes) * 60 + parseInt(seconds);
+      const currentTime = parseInt(hours, 10) * 3600 + parseInt(minutes, 10) * 60 + parseInt(seconds, 10);
       const progress = Math.min((currentTime / duration) * 100, 99);
       onProgress?.(progress);
     }

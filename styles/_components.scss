@@ -1,0 +1,34 @@
+// Component-specific styles
+
+// Image Preview - canvas sizing uses CSS custom properties
+.image-preview {
+  &__canvas {
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-tan);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+}
+
+// Export Progress - progress bar uses CSS custom properties
+.export-progress {
+  &__bar-container {
+    width: 100%;
+    height: 0.5rem;
+    background-color: rgb(196 167 125 / 0.3);
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+
+  &__bar {
+    height: 100%;
+    background-color: var(--color-olive);
+    transition: width 0.3s ease-out;
+  }
+}
+
+// Audio Player range input
+.audio-player {
+  &__range {
+    width: 100%;
+  }
+}
