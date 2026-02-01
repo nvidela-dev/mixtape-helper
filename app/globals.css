@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #F5F0E1;
+  --color-tan: #C4A77D;
+  --color-olive: #6B7B3C;
+  --color-orange: #C45C26;
+  --color-brown: #3D2B1F;
+  --color-forest: #2D4A2D;
+  --color-paper: #EBE5D5;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-brown);
+  position: relative;
+}
+
+/* Paper grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.font-display {
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
+/* Rubbery/elastic easing for animations */
+.transition-rubber {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+button {
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Custom colors as Tailwind utilities */
+.bg-cream { background-color: var(--color-cream); }
+.bg-tan { background-color: var(--color-tan); }
+.bg-olive { background-color: var(--color-olive); }
+.bg-orange { background-color: var(--color-orange); }
+.bg-brown { background-color: var(--color-brown); }
+.bg-forest { background-color: var(--color-forest); }
+.bg-paper { background-color: var(--color-paper); }
+
+.text-cream { color: var(--color-cream); }
+.text-tan { color: var(--color-tan); }
+.text-olive { color: var(--color-olive); }
+.text-orange { color: var(--color-orange); }
+.text-brown { color: var(--color-brown); }
+.text-forest { color: var(--color-forest); }
+
+.border-cream { border-color: var(--color-cream); }
+.border-tan { border-color: var(--color-tan); }
+.border-olive { border-color: var(--color-olive); }
+.border-orange { border-color: var(--color-orange); }
+.border-brown { border-color: var(--color-brown); }
+.border-forest { border-color: var(--color-forest); }
+
+/* Progress bar styling */
+.progress-bar {
+  background-color: var(--color-olive);
+}
+
+/* Range input styling */
+input[type="range"] {
+  @apply h-2 rounded-lg appearance-none cursor-pointer;
+  background-color: var(--color-tan);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 rounded-full cursor-pointer;
+  background-color: var(--color-olive);
+}
+
+input[type="range"]::-moz-range-thumb {
+  @apply w-4 h-4 rounded-full cursor-pointer border-0;
+  background-color: var(--color-olive);
+}
