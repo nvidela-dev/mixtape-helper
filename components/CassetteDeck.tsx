@@ -94,28 +94,28 @@ export function CassetteDeck({ isProcessing = false, isComplete = false }: Casse
                     <img
                       src="/logo.png"
                       alt="Mixtape"
-                      className="w-full h-full object-cover opacity-90"
+                      className="w-full h-full object-cover"
                       draggable={false}
                     />
                   </div>
 
                   {/* Tape window */}
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-brown/30 rounded-sm border border-tan/30">
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-brown rounded-sm border border-brown">
                     {/* Tape reels */}
                     <div
-                      className="absolute top-1/2 left-2 w-3 h-3 rounded-full bg-brown/60 border border-tan/40"
+                      className="absolute top-1/2 left-2 w-3 h-3 rounded-full bg-tan/70 border border-tan/40"
                       style={{ transform: `translateY(-50%) rotate(${reelRotation}deg)` }}
                     >
-                      <div className="absolute inset-0.5 rounded-full bg-brown/40" />
+                      <div className="absolute inset-0.5 rounded-full bg-tan/50" />
                     </div>
                     <div
-                      className="absolute top-1/2 right-2 w-3 h-3 rounded-full bg-brown/60 border border-tan/40"
+                      className="absolute top-1/2 right-2 w-3 h-3 rounded-full bg-tan/70 border border-tan/40"
                       style={{ transform: `translateY(-50%) rotate(${reelRotation}deg)` }}
                     >
-                      <div className="absolute inset-0.5 rounded-full bg-brown/40" />
+                      <div className="absolute inset-0.5 rounded-full bg-tan/50" />
                     </div>
                     {/* Tape between reels */}
-                    <div className="absolute top-1/2 left-5 right-5 h-0.5 bg-brown/40 -translate-y-1/2" />
+                    <div className="absolute top-1/2 left-5 right-5 h-0.5 bg-tan/60 -translate-y-1/2" />
                   </div>
 
                   {/* Cassette teeth/grip */}

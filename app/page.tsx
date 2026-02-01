@@ -117,14 +117,14 @@ export default function Home() {
       <div className="w-full max-w-2xl relative">
         {/* Collage background images */}
         <img
-          src="/mpc.jpg"
+          src="/bg1.jpg"
           alt=""
-          className="absolute -left-96 -top-32 w-[1400px] opacity-20 -rotate-6 pointer-events-none z-0"
+          className="absolute -left-96 top-12 w-[1400px] opacity-20 -rotate-6 pointer-events-none z-0"
         />
         <img
-          src="/piano.jpg"
+          src="/bg2.jpg"
           alt=""
-          className="absolute -right-96 -top-48 w-[1400px] opacity-20 rotate-3 pointer-events-none z-0"
+          className="absolute -right-96 -top-4 w-[1400px] opacity-20 rotate-3 pointer-events-none z-0"
         />
         {outputUrl ? (
           <div className="space-y-4 relative z-10">
