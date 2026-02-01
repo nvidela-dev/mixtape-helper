@@ -114,9 +114,20 @@ export default function Home() {
       </div>
 
       {/* Main content */}
-      <div className="w-full max-w-2xl relative z-10">
+      <div className="w-full max-w-2xl relative">
+        {/* Collage background images */}
+        <img
+          src="/mpc.jpg"
+          alt=""
+          className="absolute -left-96 -top-32 w-[1400px] opacity-20 -rotate-6 pointer-events-none z-0"
+        />
+        <img
+          src="/piano.jpg"
+          alt=""
+          className="absolute -right-96 -top-48 w-[1400px] opacity-20 rotate-3 pointer-events-none z-0"
+        />
         {outputUrl ? (
-          <div className="space-y-4">
+          <div className="space-y-4 relative z-10">
             <div className="rounded-2xl border-3 border-dashed border-tan bg-cream/80 backdrop-blur-sm p-6">
               <VideoPreview
                 url={outputUrl}
@@ -131,7 +142,7 @@ export default function Home() {
             </button>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className="space-y-4 relative z-10">
             {/* Upload zone */}
             <div className="rounded-2xl border-3 border-dashed border-tan bg-cream/80 backdrop-blur-sm p-6 hover:border-olive transition-colors">
               <UploadZone

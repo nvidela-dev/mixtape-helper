@@ -81,11 +81,11 @@ export function CassetteDeck({ isProcessing = false, isComplete = false }: Casse
 
               {/* Cassette tape (animated insertion) */}
               <div
-                className={`
-                  absolute left-1/2 -translate-x-1/2 w-32 h-20
-                  transition-all duration-500 ease-out
-                  ${isInserted ? 'top-0' : 'top-24'}
-                `}
+                className="absolute left-1/2 -translate-x-1/2 w-32 h-20"
+                style={{
+                  top: isInserted ? 0 : 96,
+                  transition: 'top 0.5s ease-out',
+                }}
               >
                 {/* Cassette body */}
                 <div className="absolute inset-0 bg-cream rounded border-2 border-tan shadow-md">
