@@ -10,6 +10,18 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
+  openGraph: {
+    title: 'Mixtape Helper',
+    description: 'Convert audio files to YouTube-ready MP4 videos with a static image.',
+    url: 'https://mixtape-helper.nvidela.dev',
+    siteName: 'Mixtape Helper',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mixtape Helper',
+    description: 'Convert audio files to YouTube-ready MP4 videos with a static image.',
+  },
 };
 
 export const viewport: Viewport = {
