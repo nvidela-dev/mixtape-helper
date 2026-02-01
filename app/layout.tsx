@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   keywords: ['audio to video', 'mp4 converter', 'youtube video maker', 'music video', 'mixtape', 'ffmpeg'],
   authors: [{ name: 'nvidela', url: 'https://nvidela.dev' }],
   creator: 'nvidela',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export const viewport: Viewport = {

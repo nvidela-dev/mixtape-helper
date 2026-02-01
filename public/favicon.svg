@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Mortar bowl -->
+  <path d="M4 12 C4 12 3 24 8 27 C10 28 22 28 24 27 C29 24 28 12 28 12 L4 12 Z" fill="#3D2B1F"/>
+  <!-- Bowl rim -->
+  <ellipse cx="16" cy="12" rx="13" ry="4" fill="#C4A77D"/>
+  <!-- Inner bowl highlight -->
+  <ellipse cx="16" cy="13" rx="10" ry="3" fill="#3D2B1F" opacity="0.6"/>
+  <!-- Pestle -->
+  <rect x="20" y="2" width="4" height="14" rx="2" fill="#6B7B3C" transform="rotate(25 22 9)"/>
+  <ellipse cx="21" cy="16" rx="3" ry="2" fill="#6B7B3C" transform="rotate(25 21 16)"/>
+</svg>
